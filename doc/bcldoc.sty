@@ -1,0 +1,64 @@
+%-------------------------------------------------------------------------
+% Document formatting and macros for the Basic Compression Library manual
+%-------------------------------------------------------------------------
+
+% Misc. document info
+\date{\today}
+
+% Packages
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[overload]{textcase}
+\usepackage{times}
+\usepackage{graphicx}
+
+% Encoding
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Page formatting
+\usepackage[hmargin=2.5cm]{geometry}
+\raggedright
+\raggedbottom
+\sloppy
+\usepackage{parskip}
+
+% Header and footer
+\pagestyle{fancy}
+\lhead{\textit{Basic Compression Library \bcldoctype}}
+\chead{API version \bclapiver}
+\rhead{Page \thepage/\pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+% Titlepage
+\newcommand{\bclmaketitle}{\begin{titlepage}\ \\%
+                           \begin{center}%
+                           \vspace{7.0cm}{\Huge\textbf{Basic Compression Library}}\\%
+                           \rule{10.0cm}{0.5pt}\\%
+                           \vspace{0.5cm}{\LARGE\textbf{\bcldoctype}}\\%
+                           \vspace{0.8cm}{\large\textbf{API version \bclapiver}}\\%
+                           \textit{\today}\\%
+                           \vspace{1.5cm}\textbf{\textcopyright2003-2006 Marcus Geelnard}\\%
+                           \end{center}\end{titlepage}\newpage}
+
+% Colors
+\definecolor{code}{rgb}{0.9,0.9,1.0}
+\definecolor{link}{rgb}{0.6,0.0,0.0}
+\definecolor{codeA}{rgb}{0.9,1.0,0.9}
+\definecolor{codeB}{rgb}{1.0,0.9,0.9}
+
+% Code listings
+\lstset{frame=single,frameround=tttt,backgroundcolor=\color{code},%
+        language=C,basicstyle={\ttfamily},%
+        breaklines,breakindent=0pt,postbreak=\space\space\space\space}
+
+% hyperref (bookmarks, links etc) - use this package last
+\usepackage[colorlinks=true,linkcolor=link,bookmarks=true,bookmarksopen=true,%
+            pdfhighlight=/N,bookmarksnumbered=true,bookmarksopenlevel=1,%
+            pdfview=FitH,pdfstartview=FitH]{hyperref}

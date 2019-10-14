@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <title>Instructions for building the manual</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+  <link rel="stylesheet" type="text/css" href="../style.css" media="all" />
+<body>
+  <div id="title">
+    <h1>Instrucitons for building the manual</h1>
+  </div>
+
+  <h2>Introduction</h2>
+
+  <p>This document is for developers only. It briefly describes how to build the PDF
+  manual for the Basic Compression Library (doc/manual.pdf).</p>
+
+
+  <h2>LaTeX</h2>
+
+  <p>The manual is written in LaTeX. For those of you unfamiliar with LaTeX, it is a
+  markup language (based on TeX), not entierly different from HTML for instance,
+  just not quite as structured (it has its roots back in the late 1970's). For more
+  information, go to the <a href="http://www.tug.org">TeX Users Group</a>.</p>
+
+  <p>Nevertheless, it is a free, highly portable "document format" (or rather,
+  typesetting language) that has stood the test of time, and the documents are
+  written in plain ASCII text, so it is easy to manage in a version control
+  system, for instance. Also, it can render to several different target formats,
+  including PDF, PostScript and HTML.</p>
+
+  <p>I might switch to DocBook, or just plain OpenDocument format (e.g. OpenOffice)
+  in the future, if that proves to be easier to maintain, but for now I think it is
+  a nice format for the documentation (the only real issue is setting up the LaTeX
+  environment &mdash; see below).</p>
+
+
+  <h2>Figures</h2>
+
+  <p>The figures were drawn in OpenOffice, saved as .odg (OpenDocument format) and
+  then exported to PDF, which can be used for figures in LaTeX (when building
+  the manual as a PDF document). Both the .odg and the .pdf versions of the
+  figures are located in the version repository for simplicity.</p>
+
+  <p>Keep in mind that if a .odg file is updated, the corresponding .pdf file should
+  be updated too!</p>
+
+
+  <h2>What you need</h2>
+
+  <p>You need an installation of LaTeX, with a few LaTeX packages to go with it.
+  Unfortunataly, this may be quite difficult if you have never installed a LaTeX
+  system before. Optimally, everything should work with a standard LaTeX
+  installation, but you may run into problems (typically missing TeX packages).</p>
+
+  <p>I installed LaTeX on my PCLinuxOS system using the standard package
+  distribution (using Synaptic), and everything worked OK.</p>
+
+  <p>Another alternative (for Windows, for instance) is to download and install
+  <a href="http://www.tug.org/texlive/">TeX Live</a>.</p>
+
+  <p>To update the document figures/graphics, the easiest solution is to use
+  OpenOffice or some other software that can read OpenDocument format files and
+  export PDF files.</p>
+
+
+  <h2>Building the PDF file</h2>
+
+  <p>Just run "make". Alternatively you can run "pdflatex manual.tex", twice
+  (for the TOC to work), and it's done.</p>
+
+
+  <p class="footer">Last updated: 2006-06-23</p>
+
+</body>
+</html>
