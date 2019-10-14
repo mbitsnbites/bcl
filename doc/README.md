@@ -18,7 +18,7 @@ You need an installation of LaTeX.
 Un Ubuntu, you should be good to go with:
 
 ```bash
-$ sudo apt install texlive
+$ sudo apt install texlive texlive-latex-extra
 ```
 Another alternative (for Windows, for instance) is to download and install [TeX Live](http://www.tug.org/texlive/).
 
